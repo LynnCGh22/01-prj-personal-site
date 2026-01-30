@@ -1,1 +1,90 @@
 /* Add you CSS here */
+/* Profile Card Stylesheet */
+
+/* Body styling - sets background color and centers content using flexbox */
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border: 20px solid olive;
+    margin: 0;
+}
+
+/* Card container - creates the white box with border and shadow */
+.card {
+    background-color: white;
+    border: 2px solid darkblue;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile photo styling */
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+    border: 3px solid darkblue;
+    object-fit: cover;
+    object-position: center right;
+}
+
+/* Main heading styling */
+h1 {
+    font-size: 48px;
+    text-align: center;
+    color: darkblue;
+    margin-bottom: 5px;
+}
+
+/* Subheading styling */
+h2 {
+    color: green;
+    text-align: center;
+    margin-top: 0;
+}
+
+/* Paragraph styling - sets font size and line spacing */
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Makes the second paragraph (Texas A&M info) maroon */
+p:nth-of-type(2) {
+    color: maroon;
+}
+
+h3 {
+    color: darkgreen;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Unordered list styling - centers the list items */
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    border: 3px solid maroon;
+    list-style: none;
+}
+
+/* List item styling - adds spacing between links */
+li {
+    margin: 8px 0;
+    border: 3px solid deepskyblue;
+}
+
+/* Bold text color for emphasis */
+strong {
+    color: darkgreen;
+}
+
