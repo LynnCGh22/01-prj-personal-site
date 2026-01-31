@@ -54,6 +54,8 @@ p {
     font-size: 18px;
     line-height: 1.5;
     text-align: center;
+    color: navy;
+    margin: 10px 0;
 }
 
 /* Makes the second paragraph (Texas A&M info) maroon */
