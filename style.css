@@ -90,3 +90,29 @@ strong {
     color: darkgreen;
 }
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #0A2540;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  transition: 0.2s ease;
+}
+
+.social-icons a:hover {
+  background-color: #556B2F;
+}
+.social-icons a:active {
+  transform: scale(0.95);
+}
