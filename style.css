@@ -213,6 +213,7 @@ section {
 /* Platform Colors */
 .social.linkedin { background-color: #0a66c2; }
 .social.youtube  { background-color: #ff0000; }
+.social.discord  { background-color: #5865F2; /* Discord blurple */}
 .social.github   { background-color: #24292f; }
 .social.email    { background-color: #57606a; }
 
