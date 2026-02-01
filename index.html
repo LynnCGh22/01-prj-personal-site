@@ -26,11 +26,24 @@
     </ul>
   </nav>
 
-  <!-- OCEAN BACKGROUND -->
-  <div class="ocean">
-    <div class="wave"></div>
-    <div class="wave"></div>
-  </div>
+<!-- OCEAN VIDEO BACKGROUND -->
+<div class="ocean-wrapper">
+  <video
+    class="ocean-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+  >
+    <source src="video/calm-ocean.mp4" type="video/mp4"> 
+  </video>
+
+  <!-- CSS-GENERATED OCEAN FALLBACK -->
+  <div class="ocean-fallback"></div>
+</div>
+
+
 
   <!-- PAGE CONTENT -->
   <main class="page-content">
@@ -89,6 +102,16 @@
         <span class="tag">Fitness</span>
       </div>
     </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="card coming-soon">
+    <h3>Coming Soon!</h3>
+    <p>Stay tuned for updates on my latest projects.</p>
+  </div>
+</section>
+
 
     <!-- CONTACT -->
     <section id="contact">
