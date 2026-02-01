@@ -2,7 +2,7 @@
 <!-- HTML5 document declaration -->
 <html lang="en">
 <!-- Begin HTML document in English -->
-<head>
+ <head>
     <!-- Meta information and page settings -->
     <meta charset="UTF-8">
     <!-- Character encoding for the page -->
@@ -14,7 +14,43 @@
     <!-- Link to external CSS stylesheet -->
 </head>
 <body>
+ <!-- Font Awesome Icons --> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
+  <link rel="stylesheet" href="style.css"> 
+</head> 
+<body> 
+  <!-- NAVBAR --> 
+   <nav class="navbar"> 
+    <div class="nav-left">Lynn Chaker</div> 
+    <ul class="nav-links"> 
+      <li><a href="#home">Home</a></li> 
+      <li><a href="#about">About</a></li> 
+      <li><a href="#skills">Skills</a></li> 
+      <li><a href="#hobbies">Hobbies</a></li> 
+      <li><a href="#projects">Projects</a></li> 
+      <li><a href="#contact">Contact</a></li> </ul>
+    </ul> 
+  </nav>
+  <!-- OCEAN BACKGROUND --> 
+   <div class="ocean"> 
+    <div class="wave"></div> 
+    <div class="wave"></div> 
+  </div> 
+  
+  <!-- FLOATING ICONS --> 
+   <img src="img/python.png" class="float-icon" style="left:5%; top:20%;"> 
+   <img src="img/arduino.png" class="float-icon" style="left:80%; top:60%;"> 
+   <img src="img/book.png" class="float-icon" style="left:60%; top:10%;"> 
+   <img src="img/music.png" class="float-icon" style="left:20%; top:70%;">
+
+   <!-- HOME SECTION --> 
+    <section id="home"> 
+      <h1 class="home-title">Howdy! Welcome to My Website!</h1> 
+    </section>
+
+  <!-- ABOUT SECTION -->
     <!-- Main content area -->
+     <section id="about"></section>
     <!-- Profile card container -->
     <div class="card">
         <!-- Profile photo -->
@@ -29,11 +65,48 @@
         <p>Texas A&M Graduate Engineering Student with CompTIA Security+ Certification</p>
         <!-- Professional description -->
         <p>I have a Bachelor's degree in Electronic Systems Engineering and a minor in Cybersecurity from Texas A&M University, and am currently working towards a Master's degree in Computer Science. I am energetic, motivated, and passionate about creating beautiful and functional web experiences and synching them with hardware. I like to challenge myself to develop websites and applications that solve problems with interactive solutions promoting creativity.</p>
-        <p> Software tools: HTML, CSS, JavaScript, Python, C++, SQL, GitHub, Linux (Ubuntu), Windows, Visual Studio Code </p>
-        <p> Hardware tools: Arduino, Microcontrollers, Circuit Design, PCB Design, Semiconductor Devices, Soldering, Oscilloscopes </p>
-        <p> Hobbies: Reading, Writing, Music Production (Piano, bass), Art, and Fitness</p>
-        <h3> Social Media Links </h3>
+      </div> 
+      </section>
+      <!-- SKILLS SECTION --> 
+       <section id="skills"> 
+        <!-- SOFTWARE SKILLS -->
+        <h2 class="section-title">Software Tools</h2> 
+        <div class="tag-container"> 
+          <span class="tag">HTML</span> 
+          <span class="tag">CSS</span> 
+          <span class="tag">JavaScript</span> 
+          <span class="tag">Python</span> 
+          <span class="tag">C++</span> 
+          <span class="tag">SQL</span> 
+          <span class="tag">GitHub</span> 
+          <span class="tag">Linux</span> 
+        </div>
+        <!-- HARDWARE SKILLS -->
+        <h2 class="section-title">Hardware Tools</h2> 
+        <div class="tag-container"> 
+          <span class="tag">Arduino</span> 
+          <span class="tag">Microcontrollers</span> 
+          <span class="tag">PCB Design</span> 
+          <span class="tag">Oscilloscopes</span> 
+        </div> 
+      </section>
+
+      <!-- HOBBIES SECTION --> 
+       <section id="hobbies"> 
+        <h2 class="section-title">Hobbies</h2> 
+        <div class="tag-container"> 
+          <span class="tag">Reading</span> 
+          <span class="tag">Writing</span> 
+          <span class="tag">Music Production</span> 
+          <span class="tag">Art</span> 
+          <span class="tag">Fitness</span> 
+        </div> 
+      </section>
+      <!-- CONTACT SECTION --> 
+       <section id="contact"> 
+        <h2 class="section-title">Connect With Me</h2>
         <!-- Bulleted list of social media links -->
+         <div class="social-icons"></div>
         <ul>
             <li><a href="https://www.linkedin.com/in/lynn-chaker-a5765124b/">LinkedIn</a></li>
             <li><a href="https://www.youtube.com/@lynnchaker9702/playlists">YouTube</a></li>
@@ -41,10 +114,5 @@
             <li><a href="mailto:lynn.chaker@gmail.com">My Email</a></li>
         </ul>
       </div>
+      </section>
     
-    <!-- JavaScript file for interactivity -->
-    <script src="script.js"></script>
-</body>
-</html>
-
-
