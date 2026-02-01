@@ -1,118 +1,133 @@
 <!DOCTYPE html>
-<!-- HTML5 document declaration -->
 <html lang="en">
-<!-- Begin HTML document in English -->
- <head>
-    <!-- Meta information and page settings -->
-    <meta charset="UTF-8">
-    <!-- Character encoding for the page -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Responsive design settings for mobile devices -->
-    <title>Lynn Chaker's Webpage</title>
-    <!-- Page title that appears in browser tab -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Link to external CSS stylesheet -->
-</head>
-<body>
- <!-- Font Awesome Icons --> 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
-  <link rel="stylesheet" href="style.css"> 
-</head> 
-<body> 
-  <!-- NAVBAR --> 
-   <nav class="navbar"> 
-    <div class="nav-left">Lynn Chaker</div> 
-    <ul class="nav-links"> 
-      <li><a href="#home">Home</a></li> 
-      <li><a href="#about">About</a></li> 
-      <li><a href="#skills">Skills</a></li> 
-      <li><a href="#hobbies">Hobbies</a></li> 
-      <li><a href="#projects">Projects</a></li> 
-      <li><a href="#contact">Contact</a></li> </ul>
-    </ul> 
-  </nav>
-  <!-- OCEAN BACKGROUND --> 
-   <div class="ocean"> 
-    <div class="wave"></div> 
-    <div class="wave"></div> 
-  </div> 
-  
-  <!-- FLOATING ICONS --> 
-   <img src="img/python.png" class="float-icon" style="left:5%; top:20%;"> 
-   <img src="img/arduino.png" class="float-icon" style="left:80%; top:60%;"> 
-   <img src="img/book.png" class="float-icon" style="left:60%; top:10%;"> 
-   <img src="img/music.png" class="float-icon" style="left:20%; top:70%;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lynn Chaker's Webpage</title>
 
-   <!-- HOME SECTION --> 
-    <section id="home"> 
-      <h1 class="home-title">Howdy! Welcome to My Website!</h1> 
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">Lynn Chaker</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#hobbies">Hobbies</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- OCEAN BACKGROUND -->
+  <div class="ocean">
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+
+  <!-- PAGE CONTENT -->
+  <main class="page-content">
+
+    <!-- HOME -->
+    <section id="home">
+      <h1 class="home-title">Howdy! Welcome to My Website!</h1>
     </section>
 
-  <!-- ABOUT SECTION -->
-    <!-- Main content area -->
-     <section id="about"></section>
-    <!-- Profile card container -->
-    <div class="card">
-        <!-- Profile photo -->
-        <img src="img/GitHub Profile Photo.JPG" alt="Github Profile Photo" class="profile-photo">
-        <!-- Main heading with name -->
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="card">
+        <img src="img/GitHub Profile Photo.JPG" alt="Profile Photo" class="profile-photo">
         <h1>Lynn Chaker</h1>
-        <!-- Subheading with title -->
         <h2>Graduate Engineering Student</h2>
-        <!-- Job title in bold green text -->
         <p><strong>Web Developer</strong></p>
-        <!-- Education and certification info in maroon text -->
-        <p>Texas A&M Graduate Engineering Student with CompTIA Security+ Certification</p>
-        <!-- Professional description -->
-        <p>I have a Bachelor's degree in Electronic Systems Engineering and a minor in Cybersecurity from Texas A&M University, and am currently working towards a Master's degree in Computer Science. I am energetic, motivated, and passionate about creating beautiful and functional web experiences and synching them with hardware. I like to challenge myself to develop websites and applications that solve problems with interactive solutions promoting creativity.</p>
-      </div> 
-      </section>
-      <!-- SKILLS SECTION --> 
-       <section id="skills"> 
-        <!-- SOFTWARE SKILLS -->
-        <h2 class="section-title">Software Tools</h2> 
-        <div class="tag-container"> 
-          <span class="tag">HTML</span> 
-          <span class="tag">CSS</span> 
-          <span class="tag">JavaScript</span> 
-          <span class="tag">Python</span> 
-          <span class="tag">C++</span> 
-          <span class="tag">SQL</span> 
-          <span class="tag">GitHub</span> 
-          <span class="tag">Linux</span> 
-        </div>
-        <!-- HARDWARE SKILLS -->
-        <h2 class="section-title">Hardware Tools</h2> 
-        <div class="tag-container"> 
-          <span class="tag">Arduino</span> 
-          <span class="tag">Microcontrollers</span> 
-          <span class="tag">PCB Design</span> 
-          <span class="tag">Oscilloscopes</span> 
-        </div> 
-      </section>
-
-      <!-- HOBBIES SECTION --> 
-       <section id="hobbies"> 
-        <h2 class="section-title">Hobbies</h2> 
-        <div class="tag-container"> 
-          <span class="tag">Reading</span> 
-          <span class="tag">Writing</span> 
-          <span class="tag">Music Production</span> 
-          <span class="tag">Art</span> 
-          <span class="tag">Fitness</span> 
-        </div> 
-      </section>
-      <!-- CONTACT SECTION --> 
-       <section id="contact"> 
-        <h2 class="section-title">Connect With Me</h2>
-        <!-- Bulleted list of social media links -->
-         <div class="social-icons"></div>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/lynn-chaker-a5765124b/">LinkedIn</a></li>
-            <li><a href="https://www.youtube.com/@lynnchaker9702/playlists">YouTube</a></li>
-            <li><a href="https://github.com/lynnchaker">GitHub</a></li>
-            <li><a href="mailto:lynn.chaker@gmail.com">My Email</a></li>
-        </ul>
+        <p>Texas A&amp;M Graduate Engineering Student with CompTIA Security+ Certification</p>
+        <p>
+          I have a Bachelor's degree in Electronic Systems Engineering and a minor in Cybersecurity
+          from Texas A&amp;M University, and am currently working toward a Master's degree in Computer Science.
+        </p>
       </div>
-      </section>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2 class="section-title">Software Tools</h2>
+      <div class="tag-container">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Python</span>
+        <span class="tag">C++</span>
+        <span class="tag">SQL</span>
+        <span class="tag">GitHub</span>
+        <span class="tag">Linux</span>
+      </div>
+
+      <h2 class="section-title">Hardware Tools</h2>
+      <div class="tag-container">
+        <span class="tag">Arduino</span>
+        <span class="tag">Microcontrollers</span>
+        <span class="tag">PCB Design</span>
+        <span class="tag">Oscilloscopes</span>
+      </div>
+    </section>
+
+    <!-- HOBBIES -->
+    <section id="hobbies">
+      <h2 class="section-title">Hobbies</h2>
+      <div class="tag-container">
+        <span class="tag">Reading</span>
+        <span class="tag">Writing</span>
+        <span class="tag">Music Production</span>
+        <span class="tag">Art</span>
+        <span class="tag">Fitness</span>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+  <h2 class="section-title">Connect With Me</h2>
+
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/in/lynn-chaker-a5765124b/"
+       class="social linkedin"
+       aria-label="LinkedIn"
+       target="_blank">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://www.youtube.com/@lynnchaker9702"
+       class="social youtube"
+       aria-label="YouTube"
+       target="_blank">
+      <i class="fab fa-youtube"></i>
+    </a>
+
+    <a href="https://github.com/lynnchaker"
+       class="social github"
+       aria-label="GitHub"
+       target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+
+    <a href="mailto:lynn.chaker@gmail.com"
+       class="social email"
+       aria-label="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+</section>
+
+
+  </main>
+
+</body>
+</html>
+
     

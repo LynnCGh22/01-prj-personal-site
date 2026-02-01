@@ -1,187 +1,173 @@
 /* Add you CSS here */
 /* Profile Card Stylesheet */
 
-/* Body styling - sets background color and centers content using flexbox */
-body {
-    background-color: lightblue;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    border: 10px solid olive;
-    margin: 0;
-    overflow-x: hidden;
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Navbar */
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  background: linear-gradient(#b3e5fc, #81d4fa);
+}
+
+/* NAVBAR */
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(6px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 25px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  z-index: 1000;
 }
 
 .nav-left {
-    font-size: 20px;
-    font-weight: bold;
-    color: #003355;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: #003355;
-    font-size: 16px;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-
-.nav-links li a:hover {
-    color: #0099cc;
-}
-
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Add top padding so content doesn't hide behind navbar */
-#home, #about, #skills, #hobbies, #projects, #contact {
-    padding-top: 80px;
-}
-
-/* SECTION SPACING */ 
-section { 
-  padding-top: 100px; 
-  padding-bottom: 60px; 
-  text-align: center; 
-} 
-
-/* HOME */ 
-.home-title { 
-  font-size: 40px; 
+  font-size: 20px;
+  font-weight: bold;
   color: #003355;
 }
 
-/* Card container - creates the white box with border and shadow */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #003355;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #0099cc;
+}
+
+/* OCEAN BACKGROUND */
+.ocean {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 300px;
+  background: #015871;
+  z-index: -1;
+}
+
+.wave {
+  background: url("https://i.imgur.com/AXz9b4D.png") repeat-x;
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 15s linear infinite;
+}
+
+.wave:nth-child(2) {
+  top: -175px;
+  animation: wave 30s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes wave {
+  0% { margin-left: 0; }
+  100% { margin-left: -1600px; }
+}
+
+/* CONTENT WRAPPER */
+.page-content {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* CARD */
 .card {
-    background-color: white;
-    border: 2px solid darkblue;
-    border-radius: 14px;
-    padding: 40px;
-    max-width: 650px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  background: white;
+  border-radius: 14px;
+  padding: 40px;
+  max-width: 650px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* Profile photo styling */
+/* PROFILE IMAGE */
 .profile-photo {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 20px;
-    border: 4px solid darkblue;
-    object-fit: cover;
-    object-position: center right;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid #003355;
+  margin-bottom: 20px;
 }
 
-/* Main heading styling */
-h1 {
-    font-size: 48px;
-    text-align: center;
-    color: darkblue;
-    margin-bottom: 5px;
+/* TAGS */
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
-/* Subheading styling */
-h2 {
-    color: green;
-    text-align: center;
-    margin-top: 0;
+.tag {
+  background: rgba(255,255,255,0.8);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #003355;
 }
 
-/* Paragraph styling - sets font size and line spacing */
-p {
-    font-size: 18px;
-    line-height: 1.5;
-    text-align: center;
-    color: navy;
-    margin: 10px 0;
-}
-
-/* Makes the second paragraph (Texas A&M info) maroon */
-p:nth-of-type(2) {
-    color: maroon;
-}
-
-h3 {
-    color: darkgreen;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-/* Unordered list styling - centers the list items */
-ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    border: 3px solid maroon;
-    list-style: none;
-}
-
-/* List item styling - adds spacing between links */
-li {
-    margin: 8px 0;
-    border: 3px solid deepskyblue;
-}
-
-/* Bold text color for emphasis */
-strong {
-    color: darkgreen;
-}
-
+/* SOCIAL ICON BUTTONS */
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
+  gap: 18px;
+  margin-top: 30px;
 }
 
-.social-icons a {
-  width: 48px;
-  height: 48px;
+.social {
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  background-color: #0A2540;
+  background-color: #24292f; /* GitHub base */
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 22px;
-  transition: 0.2s ease;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
-.social-icons a:hover {
-  background-color: #556B2F;
+/* Platform Colors */
+.social.linkedin { background-color: #0a66c2; }
+.social.youtube  { background-color: #ff0000; }
+.social.github   { background-color: #24292f; }
+.social.email    { background-color: #57606a; }
+
+/* Hover Effects */
+.social:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 22px rgba(47,129,247,0.45);
+  background-color: #2f81f7; /* GitHub blue accent */
 }
-.social-icons a:active {
+
+.social:active {
   transform: scale(0.95);
 }
-
 
 
