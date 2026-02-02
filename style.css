@@ -228,9 +228,12 @@ section {
   display: block;
 }
 
-.social.github svg {
-  width: 1.35em;
-  height: 1.35em;
+/* Fix Font Awesome SVG icons (GitHub) */
+.social svg {
+  width: 1.25em;
+  height: 1.25em;
+  display: block;
+  fill: currentColor;
 }
 
 /* Platform colors */
