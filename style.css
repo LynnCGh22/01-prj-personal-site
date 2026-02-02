@@ -224,13 +224,6 @@ section {
   background-color: #2f81f7; /* GitHub blue accent */
 }
 
-
-.social-btn:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 10px 22px rgba(47,129,247,0.45);
-  background-color: #2f81f7; /* GitHub blue accent */
-}
-
 .social:active {
   transform: scale(0.95);
 }
