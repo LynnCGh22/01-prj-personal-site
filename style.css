@@ -228,6 +228,11 @@ section {
   display: block;
 }
 
+.social.github svg {
+  width: 1.35em;
+  height: 1.35em;
+}
+
 /* Platform colors */
 .social.linkedin { background-color: #0a66c2; }
 .social.youtube  { background-color: #ff0000; }
