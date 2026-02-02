@@ -223,17 +223,26 @@ section {
 
 /* Normalize icon size (Font Awesome fix) */
 .social i {
-  width: 1em;
-  height: 1em;
+  font-size: 22px;
+  line-height: 1;
   display: block;
 }
 
 /* Fix Font Awesome SVG icons (GitHub) */
 .social svg {
-  width: 1.25em;
-  height: 1.25em;
+  font-size: 22px;
+  width: 22px;
+  height: 22px;
+  line-height: 1;
   display: block;
-  fill: currentColor;
+}
+
+.social.github i,
+.social.github svg {
+  font-size: 26px;
+  width: 26px;
+  height: 26px;
+  transform: translateY(1px); /* optical centering */
 }
 
 /* Platform colors */
