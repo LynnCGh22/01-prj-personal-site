@@ -231,14 +231,14 @@ section {
 /* Platform colors */
 .social.linkedin { background-color: #0a66c2; }
 .social.youtube  { background-color: #ff0000; }
-.social.discord  { background-color: #5865F2; }
+.social.discord  { background-color: #5865F2; } /* Discord blurple */
 .social.github   { background-color: #24292f; }
 .social.email    { background-color: #57606a; }
 
 /* Hover effect (GitHub-inspired accent) */
 .social:hover {
   transform: translateY(-4px) scale(1.05);
-  background-color: #2f81f7;
+  background-color: black;
   box-shadow: 0 10px 22px rgba(47, 129, 247, 0.45);
 }
 
