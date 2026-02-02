@@ -228,4 +228,15 @@ section {
   transform: scale(0.95);
 }
 
+.social-btn.github {
+  background: #0d1117;        /* GitHub dark */
+  color: #c9d1d9;
+}
 
+.social-btn.github:hover {
+  background: #161b22;
+  color: #58a6ff;             /* GitHub link blue */
+}
+.social-btn.github:active {
+  background: #0d1117;
+}
