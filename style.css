@@ -239,7 +239,7 @@ section {
 .social:hover {
   transform: translateY(-4px) scale(1.05);
   background-color: black;
-  box-shadow: 0 10px 22px rgba(47, 129, 247, 0.45);
+  box-shadow: 0 10px 22px rgba(2, 13, 29, 0.45);
 }
 
 /* Active (click) */
