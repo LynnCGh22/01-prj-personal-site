@@ -224,19 +224,26 @@ section {
   background-color: #2f81f7; /* GitHub blue accent */
 }
 
-.social:active {
-  transform: scale(0.95);
+.social-btn {
+  display: inline-flex;          
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+  min-width: 48px;               /* prevents stretching */
+  min-height: 48px;
+
+  border-radius: 50%;
+  text-decoration: none;
+
+  font-size: 1.4rem;
+  line-height: 1;                /* ← prevents vertical stretch */
+
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.social-btn.github {
-  background: #0d1117;        /* GitHub dark */
-  color: #c9d1d9;
+.social-btn:hover {
+  transform: translateY(-3px);
 }
 
-.social-btn.github:hover {
-  background: #161b22;
-  color: #58a6ff;             /* GitHub link blue */
-}
-.social-btn.github:active {
-  background: #0d1117;
-}
