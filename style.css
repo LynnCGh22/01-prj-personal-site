@@ -319,4 +319,262 @@ section {
   transform: scale(0.95);
 }
 
+/* ===========================
+   MOBILE RESPONSIVE DESIGN
+   =========================== */
+
+/* Tablets and phones (screens 768px or smaller) */
+@media (max-width: 768px) {
+  
+  /* Adjust navbar for smaller screens */
+  .navbar {
+    padding: 0 15px;
+    height: 50px;
+  }
+  
+  .nav-left {
+    font-size: 16px;
+  }
+  
+  /* Stack navigation links vertically on very small screens */
+  .nav-links {
+    gap: 12px;
+    font-size: 14px;
+  }
+  
+  .nav-links a {
+    font-size: 13px;
+  }
+  
+  /* Adjust page content padding for mobile */
+  .page-content {
+    padding-top: 70px;
+  }
+  
+  /* Reduce section padding on mobile */
+  section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    scroll-margin-top: 50px;
+  }
+  
+  /* Adjust home title */
+  .home-title {
+    font-size: 24px;
+    padding: 0 15px;
+  }
+  
+  /* Make profile card more compact */
+  .card {
+    padding: 25px 20px;
+    max-width: calc(100% - 20px);
+    margin: 0 10px;
+  }
+  
+  .card h1 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  
+  .card h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  /* Reduce profile photo size */
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+    border-width: 3px;
+    margin-bottom: 15px;
+  }
+  
+  /* Reduce section title size */
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Adjust tag spacing and size */
+  .tag-container {
+    gap: 8px;
+    padding: 0 15px;
+  }
+  
+  .tag {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  /* Make project card responsive */
+  .project-card {
+    padding: 20px 15px;
+    max-width: calc(100% - 20px);
+    margin: 0 10px;
+  }
+  
+  .project-label {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .project-select {
+    max-width: 100%;
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+  
+  .project-details {
+    font-size: 13px;
+  }
+  
+  .project-details h3 {
+    font-size: 16px;
+  }
+  
+  .project-details p {
+    font-size: 13px;
+  }
+  
+  .project-details a {
+    font-size: 13px;
+  }
+  
+  /* Reduce social icon size on mobile */
+  .social-icons {
+    gap: 12px;
+    margin-top: 20px;
+  }
+  
+  .social {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+  
+  .social i {
+    font-size: 18px;
+  }
+  
+  .social svg {
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+  }
+  
+  .social.github i,
+  .social.github svg {
+    font-size: 21px;
+    width: 21px;
+    height: 21px;
+  }
+}
+
+/* Extra small screens (phones - 480px or smaller) */
+@media (max-width: 480px) {
+  
+  /* Further reduce navbar for very small phones */
+  .navbar {
+    padding: 0 10px;
+    height: 45px;
+  }
+  
+  .nav-left {
+    font-size: 14px;
+  }
+  
+  .nav-links {
+    gap: 8px;
+    font-size: 12px;
+  }
+  
+  .nav-links a {
+    font-size: 11px;
+  }
+  
+  /* Reduce section padding even more */
+  section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  /* Make home title smaller */
+  .home-title {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+  
+  /* Make card even more compact */
+  .card {
+    padding: 20px 15px;
+    max-width: calc(100% - 15px);
+    margin: 0 7.5px;
+  }
+  
+  .card h1 {
+    font-size: 18px;
+  }
+  
+  .card h2 {
+    font-size: 14px;
+  }
+  
+  .card p {
+    font-size: 12px;
+  }
+  
+  /* Make profile photo smaller */
+  .profile-photo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 12px;
+  }
+  
+  /* Reduce section title more */
+  .section-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  /* Adjust tags for very small screens */
+  .tag {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+  
+  /* Stack social icons if needed */
+  .social-icons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .social {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+  
+  .social i {
+    font-size: 16px;
+  }
+  
+  .social svg {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+  }
+  
+  .social.github i,
+  .social.github svg {
+    font-size: 19px;
+    width: 19px;
+    height: 19px;
+  }
+}
+
 
