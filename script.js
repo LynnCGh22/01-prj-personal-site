@@ -21,7 +21,14 @@ document.addEventListener('DOMContentLoaded', function() {
             description:
                 "A website built for Intel's sustainability initiative, demonstrating their efforts in reducing carbon emissions and promoting eco-friendly practices. The site features a responsive design with interactive elements such as a microchip-themed timeline showcasing Intel's sustainability milestones, and a dynamic infographic illustrating their strategies in reducing carbon footprint. It is built with HTML, CSS, and JavaScript, and incorporates accessibility features along with front-end development and creative technical execution to effectively communicate Intel's commitment to sustainability.",
             link: 'https://lynncgh22.github.io/05-Intel-Summit-Check-In/'
+        },
+        'NASA-Space-Image-Gallery': {
+            title: 'NASA Space Image Gallery',
+            description: 
+              "A website built as an interactive NASA Space Explorer web application that pulls real astronomy images, videos, descriptions, and other metadata directly from NASA's APOD APIs. The site features dynamic content loading, allowing users to explore a past collection of space related media. It features date-based image retrieval, a responsive UI design, and accessibility features such as light and dark modes for accessibility. It is built with HTML, CSS, and JavaScript, and incorporates front-end development and creative technical execution to provide an engaging user experience while showcasing NASA's space imagery.",
+            link: 'https://lynncgh22.github.io/07-nasa-space-explorer/?v=timestamp'
         }
+
     };
 
 
