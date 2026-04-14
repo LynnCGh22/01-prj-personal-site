@@ -18,6 +18,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+    const sustainabilityProjectInfo = {
+        'Intel-Sustainability-Project': {
+            title: 'Intel Sustainability Project',
+            description:
+                "A website built for Intel's sustainability initiative, demonstrating their efforts in reducing carbon emissions and promoting eco-friendly practices. The site features a responsive design with interactive elements such as a microchip-themed timeline showcasing Intel's sustainability milestones, and a dynamic infographic illustrating their strategies in reducing carbon footprint. It is built with HTML, CSS, and JavaScript, and incorporates accessibility features along with front-end development and creative technical execution to effectively communicate Intel's commitment to sustainability.",
+            link: 'https://lynncgh22.github.io/06-intel-sustainability-project/'
+        }
+    };
+
+
     projectSelect.addEventListener('change', function() {
         const selectedProject = projectInfo[this.value];
 
