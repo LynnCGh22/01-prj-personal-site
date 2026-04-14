@@ -107,12 +107,22 @@
 
     <!-- PROJECTS -->
     <section id="projects">
-  <h2 class="section-title">Projects</h2>
-  <div class="card coming-soon">
-    <h3>Coming Soon!</h3>
-    <p>Stay tuned for updates on my latest projects.</p>
-  </div>
-</section>
+      <h2 class="section-title">Projects</h2>
+
+      <div class="project-card">
+        <label for="project-select" class="project-label">Choose a project</label>
+        <select id="project-select" class="project-select">
+          <option value="">Select a project</option>
+          <option value="aqua-rise">AquaRise - Water Drop Rush</option>
+        </select>
+
+        <div id="project-details" class="project-details" hidden>
+          <h3 id="project-title"></h3>
+          <p id="project-description"></p>
+          <a id="project-link" href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+        </div>
+      </div>
+    </section>
 
 
     <!-- CONTACT -->
@@ -162,6 +172,8 @@
 
 
   </main>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
