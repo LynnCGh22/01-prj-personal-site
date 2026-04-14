@@ -15,10 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             description:
                 "AquaRise is a fast-paced browser game inspired by Charity: Water's mission to promote global access to clean water. Players collect clean water droplets while avoiding polluted droplets. It is built with HTML, CSS, and JavaScript and includes accessibility features, smooth animations, and intuitive controls.",
             link: 'https://lynncgh22.github.io/05-cw-game-water-drop-update/'
-        }
-    };
-
-    const sustainabilityProjectInfo = {
+        },
         'Intel-Sustainability-Project': {
             title: 'Intel Sustainability Project',
             description:
