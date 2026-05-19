@@ -1,3 +1,4 @@
+/* Create Drop-Down Menu for Projects Section */
 document.addEventListener('DOMContentLoaded', function() {
     const projectSelect = document.getElementById('project-select');
     const projectDetails = document.getElementById('project-details');
@@ -50,5 +51,61 @@ document.addEventListener('DOMContentLoaded', function() {
         projectDescription.textContent = selectedProject.description;
         projectLink.href = selectedProject.link;
         projectDetails.hidden = false;
+    });
+});
+
+/* Create Drop-Down Menu for See Me in Other Events Section */
+
+document.addEventListener('DOMContentLoaded', function() {
+    const eventSelect = document.getElementById('event-select');
+    const eventDetails = document.getElementById('event-details');
+    const eventTitle = document.getElementById('event-title');
+    const eventDescription = document.getElementById('event-description');
+    const eventLink = document.getElementById('event-link');
+    const cyberautoCollageContainer = document.getElementById('cyberauto-collage-container');
+    const mcdermottVideoContainer = document.getElementById('mcdermott-video-container');
+
+    if (!eventSelect || !eventDetails || !eventTitle || !eventDescription || !eventLink) {
+        return;
+    }
+
+    const eventInfo = {
+        'cyberauto-2023': {
+            title: '2023 CyberAuto Challenge',
+            description:
+                'I was selected to participate in the 2023 CyberAuto Challenge, a national automotive cybersecurity competition that took place in Warren, Michigan and was hosted at McComb Community College. I competed on the Toyota team, where I collaborated with other students to exploit vulnerabilities in a simulated automotive environment, as well as develop and implement defensive strategies to protect against cyber threats. It was an incredible experience that allowed me to apply my cybersecurity knowledge in a real-world context and collaborate with other passionate individuals in the field.',
+            link: 'https://www.cyberauto-challenge.org/',
+            showCollage: true,
+            showVideo: false
+        },
+        'mcdermott-2024': {
+            title: '2024 McDermott International Internship',
+            description:
+                'I worked as an intern for McDermott International in the summer of 2024 in the Instrumentation & Controls (I&C) department, where I gained experience with working on Piping and Instrumentation Diagrams (P&IDs), dissecting elements such as temperature, pressure, liquid level, and flow. I also used Microsoft Excel and PowerPoint to create Cause & Effect (C&E) diagrams, as well as analytical graphs and charts on P&IDs and various other documents from different LNG projects. I had the opportunity to collaborate with engineers and professionals in the field, and was able to apply my engineering knowledge to real-world projects. It was an invaluable experience that allowed me to gain insight into the industry and develop my skills in a practical setting.',
+            link: 'https://www.linkedin.com/posts/mcdermott-international-inc-_nationalinternday-ugcPost-7222277696930689026-YtxK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD3amaMBdLcRewv3Gu1sE-iwwy3Ckm-fOVk',
+            showCollage: false,
+            showVideo: true
+        }
+    };
+
+    eventSelect.addEventListener('change', function() {
+        const selectedEvent = eventInfo[this.value];
+
+        if (!selectedEvent) {
+            eventDetails.hidden = true;
+            cyberautoCollageContainer.hidden = true;
+            mcdermottVideoContainer.hidden = true;
+            return;
+        }
+
+        eventTitle.textContent = selectedEvent.title;
+        eventDescription.textContent = selectedEvent.description;
+        eventLink.href = selectedEvent.link;
+        
+        // Show or hide media based on event type
+        cyberautoCollageContainer.hidden = !selectedEvent.showCollage;
+        mcdermottVideoContainer.hidden = !selectedEvent.showVideo;
+        
+        eventDetails.hidden = false;
     });
 });

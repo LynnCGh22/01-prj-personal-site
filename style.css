@@ -189,6 +189,66 @@ section {
   text-decoration: underline;
 }
 
+/* EVENT DROPDOWN SECTION */
+.event-label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #003355;
+}
+
+.event-select {
+  width: 100%;
+  max-width: 360px;
+  padding: 10px 12px;
+  border: 2px solid #81d4fa;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #003355;
+  background: #ffffff;
+}
+
+.event-details {
+  margin-top: 24px;
+  text-align: left;
+}
+
+.event-details h3 {
+  margin-bottom: 12px;
+  color: #003355;
+}
+
+.event-details p {
+  line-height: 1.6;
+  color: #1f3a4a;
+}
+
+.event-details a {
+  display: inline-block;
+  margin-top: 16px;
+  color: #0a66c2;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.event-details a:hover {
+  text-decoration: underline;
+}
+
+/* Container for event media (video or collage) */
+.event-details .cyberauto-collage,
+.event-details .mcdermott-video-wrapper {
+  margin: 20px 0;
+}
+
+.mcdermott-video {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
 /* SECTION TITLE CARD */
 .section-title {
   font-size: 28px;
@@ -512,6 +572,44 @@ section {
     font-size: 13px;
   }
 
+  /* Make event dropdown responsive on mobile */
+  .event-card {
+    padding: 20px 15px;
+    max-width: calc(100% - 20px);
+    margin: 0 10px;
+  }
+
+  .event-label {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .event-select {
+    max-width: 100%;
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .event-details {
+    font-size: 13px;
+  }
+
+  .event-details h3 {
+    font-size: 16px;
+  }
+
+  .event-details p {
+    font-size: 13px;
+  }
+
+  .event-details a {
+    font-size: 13px;
+  }
+
+  .mcdermott-video {
+    max-width: 100%;
+  }
+
   /* Make event card and collage fit smaller screens */
   .event-card {
     padding: 20px 15px;
@@ -653,6 +751,32 @@ section {
     width: 31%;
     border-radius: 8px;
     border-width: 2px;
+  }
+
+  /* Keep event dropdown compact on very small phones */
+  .event-label {
+    font-size: 12px;
+  }
+
+  .event-select {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  .event-details {
+    font-size: 11px;
+  }
+
+  .event-details h3 {
+    font-size: 14px;
+  }
+
+  .event-details p {
+    font-size: 11px;
+  }
+
+  .mcdermott-video {
+    max-width: 100%;
   }
   
   /* Stack social icons if needed */

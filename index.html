@@ -130,33 +130,29 @@
     <!-- SEE ME IN OTHER EVENTS -->
      <section id="events">
       <h2 class="section-title">See Me in Other Events</h2>
-      <!-- 2023 CyberAuto Challenge -->
+      
+      <!-- Event dropdown selector -->
       <div class="event-card">
-        <p>
-          I was selected to participate in the 2023 CyberAuto Challenge, a national automotive cybersecurity competition that took place in Warren, Michigan and was hosted at McComb Community College. I competed on the Toyota team, where I collaborated with other students to exploit vulnerabilities in a simulated automotive environment, as well as develop and implement defensive strategies to protect against cyber threats. It was an incredible experience that allowed me to apply my cybersecurity knowledge in a real-world context and collaborate with other passionate individuals in the field.
-        </p>
+        <label for="event-select" class="event-label">Choose an event</label>
+        <select id="event-select" class="event-select">
+          <option value="">Select an event</option>
+          <option value="cyberauto-2023">2023 CyberAuto Challenge</option>
+          <option value="mcdermott-2024">2024 McDermott International Internship</option>
+        </select>
 
-        <!-- CyberAuto photo collage -->
-        <div class="cyberauto-collage" aria-label="CyberAuto Challenge photo collage">
-          <img src="img/IMG_4903.JPG" alt="CyberAuto Challenge event photo 1" class="collage-photo collage-photo-left">
-          <img src="img/IMG_4904.JPG" alt="CyberAuto Challenge event photo 2" class="collage-photo collage-photo-center">
-          <img src="img/IMG_4905.JPG" alt="CyberAuto Challenge event photo 3" class="collage-photo collage-photo-right">
-        </div>
-
-        <a href="https://www.cyberauto-challenge.org/" target="_blank" rel="noopener noreferrer">
-          <h3>2023 CyberAuto Challenge</h3>
-        </a>
-      </div>
-
-      <!-- 2024 McDermott International Internship -->
-      <div class="event-card">
-        <p>
-          I worked as an intern for McDermott International in the summer of 2024 in the Instrumentation & Controls (I&C) department, where I gained experience with working on Piping and Instrumentation Diagrams (P&IDs), dissecting elements such as temperature, pressure, liquid level, and flow. I also used Microsoft Excel and PowerPoint to create Cause & Effect (C&E) diagrams, as well as analytical graphs and charts on P&IDs and various other documents from different LNG projects. I had the opportunity to collaborate with engineers and professionals in the field, and was able to apply my engineering knowledge to real-world projects. It was an invaluable experience that allowed me to gain insight into the industry and develop my skills in a practical setting.
-        </p>
-
-        <!-- McDermott Golden Pass LNG Trip Compilation -->
-         <a href="https://www.linkedin.com/posts/mcdermott-international-inc-_nationalinternday-ugcPost-7222277696930689026-YtxK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD3amaMBdLcRewv3Gu1sE-iwwy3Ckm-fOVk" target="_blank" rel="noopener noreferrer">
-          <div class="mcdermott-video-wrapper">
+        <!-- Event details revealed by dropdown -->
+        <div id="event-details" class="event-details" hidden>
+          <p id="event-description"></p>
+          
+          <!-- CyberAuto photo collage (shown only for CyberAuto) -->
+          <div id="cyberauto-collage-container" class="cyberauto-collage" hidden aria-label="CyberAuto Challenge photo collage">
+            <img src="img/IMG_4903.JPG" alt="CyberAuto Challenge event photo 1" class="collage-photo collage-photo-left">
+            <img src="img/IMG_4904.JPG" alt="CyberAuto Challenge event photo 2" class="collage-photo collage-photo-center">
+            <img src="img/IMG_4905.JPG" alt="CyberAuto Challenge event photo 3" class="collage-photo collage-photo-right">
+          </div>
+          
+          <!-- McDermott video (shown only for McDermott) -->
+          <div id="mcdermott-video-container" class="mcdermott-video-wrapper" hidden>
             <video
               class="mcdermott-video"
               autoplay
@@ -168,8 +164,11 @@
               <source src="video/McDermott Golden Pass LNG Trip Compilation.mp4" type="video/mp4"> 
             </video>
           </div>
-        </a>
-        <h3>2024 McDermott International Internship</h3>
+          
+          <a id="event-link" href="#" target="_blank" rel="noopener noreferrer">
+            <h3 id="event-title"></h3>
+          </a>
+        </div>
       </div>
     </section>
     <!-- CONTACT -->
