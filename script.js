@@ -65,7 +65,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const cyberautoCollageContainer = document.getElementById('cyberauto-collage-container');
     const mcdermottVideoContainer = document.getElementById('mcdermott-video-container');
 
-    if (!eventSelect || !eventDetails || !eventTitle || !eventDescription || !eventLink) {
+    if (!eventSelect || !eventDetails || !eventTitle || !eventDescription || !eventLink || !cyberautoCollageContainer || !mcdermottVideoContainer) {
+        console.error('Event section elements not found');
         return;
     }
 

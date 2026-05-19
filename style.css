@@ -302,6 +302,11 @@ section {
   color: #003355;
 }
 
+/* Hide elements with hidden attribute */
+[hidden] {
+  display: none !important;
+}
+
 /* EVENTS SECTION CARD */
 .event-card {
   width: min(100%, 760px);
