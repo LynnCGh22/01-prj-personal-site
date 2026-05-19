@@ -242,6 +242,73 @@ section {
   color: #003355;
 }
 
+/* EVENTS SECTION CARD */
+.event-card {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.event-card p {
+  line-height: 1.7;
+  color: #1f3a4a;
+}
+
+.event-card a {
+  display: inline-block;
+  margin-top: 16px;
+  text-decoration: none;
+}
+
+.event-card h3 {
+  color: #0a66c2;
+}
+
+.event-card h3:hover {
+  text-decoration: underline;
+}
+
+/* Simple 3-image collage for the CyberAuto section */
+.cyberauto-collage {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.collage-photo {
+  width: 32%;
+  max-width: 220px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #ffffff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+/* Small rotation makes the collage look more natural */
+.collage-photo-left {
+  transform: rotate(-4deg);
+}
+
+.collage-photo-center {
+  transform: translateY(-8px);
+}
+
+.collage-photo-right {
+  transform: rotate(4deg);
+}
+
+.cyberauto-collage:hover .collage-photo {
+  transform: rotate(0deg) translateY(0);
+}
+
 /* =========================
    SOCIAL ICON BUTTONS
    ========================= */
@@ -444,6 +511,26 @@ section {
   .project-details a {
     font-size: 13px;
   }
+
+  /* Make event card and collage fit smaller screens */
+  .event-card {
+    padding: 20px 15px;
+    max-width: calc(100% - 20px);
+    margin: 0 10px;
+  }
+
+  .event-card p {
+    font-size: 14px;
+  }
+
+  .cyberauto-collage {
+    gap: 8px;
+  }
+
+  .collage-photo {
+    width: 31%;
+    border-width: 2px;
+  }
   
   /* Reduce social icon size on mobile */
   .social-icons {
@@ -545,6 +632,27 @@ section {
   .tag {
     padding: 5px 10px;
     font-size: 11px;
+  }
+
+  /* Keep the collage easy to view on small phones */
+  .event-card {
+    padding: 18px 12px;
+    max-width: calc(100% - 15px);
+    margin: 0 7.5px;
+  }
+
+  .event-card p {
+    font-size: 12px;
+  }
+
+  .cyberauto-collage {
+    gap: 6px;
+  }
+
+  .collage-photo {
+    width: 31%;
+    border-radius: 8px;
+    border-width: 2px;
   }
   
   /* Stack social icons if needed */
