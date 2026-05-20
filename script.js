@@ -64,8 +64,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const eventLink = document.getElementById('event-link');
     const cyberautoCollageContainer = document.getElementById('cyberauto-collage-container');
     const mcdermottVideoContainer = document.getElementById('mcdermott-video-container');
+    const capstoneCollageContainer = document.getElementById('capstone-collage-container');
 
-    if (!eventSelect || !eventDetails || !eventTitle || !eventDescription || !eventLink || !cyberautoCollageContainer || !mcdermottVideoContainer) {
+    if (!eventSelect || !eventDetails || !eventTitle || !eventDescription || !eventLink || !cyberautoCollageContainer || !mcdermottVideoContainer || !capstoneCollageContainer) {
         console.error('Event section elements not found');
         return;
     }
@@ -76,16 +77,21 @@ document.addEventListener('DOMContentLoaded', function() {
             description:
                 'I was selected to participate in the 2023 CyberAuto Challenge, a national automotive cybersecurity competition that took place in Warren, Michigan and was hosted at McComb Community College. I competed on the Toyota team, where I collaborated with other students to exploit vulnerabilities in a simulated automotive environment, as well as develop and implement defensive strategies to protect against cyber threats. It was an incredible experience that allowed me to apply my cybersecurity knowledge in a real-world context and collaborate with other passionate individuals in the field.',
             link: 'https://www.cyberauto-challenge.org/',
-            showCollage: true,
-            showVideo: false
+            mediaType: 'cyberauto-collage'
         },
         'mcdermott-2024': {
             title: '2024 McDermott International Internship',
             description:
                 'I worked as an intern for McDermott International in the summer of 2024 in the Instrumentation & Controls (I&C) department, where I gained experience with working on Piping and Instrumentation Diagrams (P&IDs), dissecting elements such as temperature, pressure, liquid level, and flow. I also used Microsoft Excel and PowerPoint to create Cause & Effect (C&E) diagrams, as well as analytical graphs and charts on P&IDs and various other documents from different LNG projects. I had the opportunity to collaborate with engineers and professionals in the field, and was able to apply my engineering knowledge to real-world projects. It was an invaluable experience that allowed me to gain insight into the industry and develop my skills in a practical setting.',
             link: 'https://www.linkedin.com/posts/mcdermott-international-inc-_nationalinternday-ugcPost-7222277696930689026-YtxK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD3amaMBdLcRewv3Gu1sE-iwwy3Ckm-fOVk',
-            showCollage: false,
-            showVideo: true
+            mediaType: 'mcdermott-video'
+        },
+        'capstone-project-2024': {
+            title: '2024-2025 Capstone Project',
+            description:
+                'I worked on the AI Recovery Vision - Exercise Instructor during my senior year of university. I was the Test and Implementation Engineer for the project, where I was responsible for handling the Purchase Order (PO) process and incorporating the hardware components, including the Arduino board, circuit components, and sensors. I also embedded the circuit with Arduino IDE library code to ensure proper functionality.',
+            link: 'https://www.example.com/capstone-project',
+            mediaType: 'capstone-collage'
         }
     };
 
@@ -96,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
             eventDetails.hidden = true;
             cyberautoCollageContainer.hidden = true;
             mcdermottVideoContainer.hidden = true;
+            capstoneCollageContainer.hidden = true;
             return;
         }
 
@@ -104,8 +111,9 @@ document.addEventListener('DOMContentLoaded', function() {
         eventLink.href = selectedEvent.link;
         
         // Show or hide media based on event type
-        cyberautoCollageContainer.hidden = !selectedEvent.showCollage;
-        mcdermottVideoContainer.hidden = !selectedEvent.showVideo;
+        cyberautoCollageContainer.hidden = selectedEvent.mediaType !== 'cyberauto-collage';
+        mcdermottVideoContainer.hidden = selectedEvent.mediaType !== 'mcdermott-video';
+        capstoneCollageContainer.hidden = selectedEvent.mediaType !== 'capstone-collage';
         
         eventDetails.hidden = false;
     });
