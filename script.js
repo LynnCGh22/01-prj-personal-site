@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title: '2024-2025 Capstone Project',
             description:
                 'I worked on the AI Recovery Vision - Exercise Instructor during my senior year of university. I was the Test and Implementation Engineer for the project, where I was responsible for handling the Purchase Order (PO) process and incorporating the hardware components, including the Arduino board, circuit components, and sensors. I also embedded the circuit with Arduino IDE library code to ensure proper functionality.',
-            link: 'https://www.example.com/capstone-project',
+            link: 'https://www.youtube.com/watch?v=ins52cy6WJk',
             mediaType: 'capstone-collage'
         },
         'turbo-machinery-symposium-2025': {
