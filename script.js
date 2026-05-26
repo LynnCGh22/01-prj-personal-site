@@ -92,6 +92,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 'I worked on the AI Recovery Vision - Exercise Instructor during my senior year of university. I was the Test and Implementation Engineer for the project, where I was responsible for handling the Purchase Order (PO) process and incorporating the hardware components, including the Arduino board, circuit components, and sensors. I also embedded the circuit with Arduino IDE library code to ensure proper functionality.',
             link: 'https://www.example.com/capstone-project',
             mediaType: 'capstone-collage'
+        },
+        'turbo-machinery-symposium-2025': {
+            title: '2025 Turbo Machinery Symposium',
+            description:
+                'I attended the 2025 Turbo Machinery Symposium hosted by Texas A&M University, an annual event that brings together professionals and experts in engineering and technology fields from companies such as Baker Hughes, Halliburton, Schlumberger, and Hitachi. The symposium featured keynote speakers, technical sessions, and networking opportunities for attendees to connect with others working in similar fields. It was a valuable experience that allowed me to learn about cutting-edge technologies and developments in turbo machinery, as well as connect with industry professionals and gain insights into recent and ongoing projects. The following professional photos were taken during the symposium, where I had the opportunity to network with professionals and attend various sessions on topics such as gas turbines, compressors, and other related technologies.',
+            link: 'https://tps.tamu.edu/',
+            mediaType: 'none'
         }
     };
 
