@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const cyberautoCollageContainer = document.getElementById('cyberauto-collage-container');
     const mcdermottVideoContainer = document.getElementById('mcdermott-video-container');
     const capstoneCollageContainer = document.getElementById('capstone-collage-container');
+    const turboCollageContainer = document.getElementById('turbo-collage-container');
 
     if (!eventSelect || !eventDetails || !eventTitle || !eventDescription || !eventLink || !cyberautoCollageContainer || !mcdermottVideoContainer || !capstoneCollageContainer) {
         console.error('Event section elements not found');
@@ -98,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
             description:
                 'I attended the 2025 Turbo Machinery Symposium hosted by Texas A&M University, an annual event that brings together professionals and experts in engineering and technology fields from companies such as Baker Hughes, Halliburton, Schlumberger, and Hitachi. The symposium featured keynote speakers, technical sessions, and networking opportunities for attendees to connect with others working in similar fields. It was a valuable experience that allowed me to learn about cutting-edge technologies and developments in turbo machinery, as well as connect with industry professionals and gain insights into recent and ongoing projects. The following professional photos were taken during the symposium, where I had the opportunity to network with professionals and attend various sessions on topics such as gas turbines, compressors, and other related technologies.',
             link: 'https://tps.tamu.edu/',
-            mediaType: 'none'
+            mediaType: 'turbo-collage'
         }
     };
 
@@ -121,6 +122,9 @@ document.addEventListener('DOMContentLoaded', function() {
         cyberautoCollageContainer.hidden = selectedEvent.mediaType !== 'cyberauto-collage';
         mcdermottVideoContainer.hidden = selectedEvent.mediaType !== 'mcdermott-video';
         capstoneCollageContainer.hidden = selectedEvent.mediaType !== 'capstone-collage';
+        if (turboCollageContainer) {
+            turboCollageContainer.hidden = selectedEvent.mediaType !== 'turbo-collage';
+        }
         
         eventDetails.hidden = false;
     });
