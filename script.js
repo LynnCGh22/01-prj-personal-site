@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const eventLink = document.getElementById('event-link');
     const cyberautoCollageContainer = document.getElementById('cyberauto-collage-container');
     const mcdermottVideoContainer = document.getElementById('mcdermott-video-container');
+    const tamuCommencementCollageContainer = document.getElementById('tamu-commencement-collage-container');
     const capstoneCollageContainer = document.getElementById('capstone-collage-container');
     const turboCollageContainer = document.getElementById('turbo-collage-container');
 
@@ -90,9 +91,16 @@ document.addEventListener('DOMContentLoaded', function() {
         'capstone-project-2024': {
             title: '2024-2025 Capstone Project',
             description:
-                'I worked on the AI Recovery Vision - Exercise Instructor during my senior year of university. I was the Test and Implementation Engineer for the project, where I was responsible for handling the Purchase Order (PO) process and incorporating the hardware components, including the Arduino board, circuit components, and sensors. I also embedded the circuit with Arduino IDE library code to ensure proper functionality.',
+                'I worked on the AI Recovery Vision - Exercise Instructor during my senior year, serving as the Test and Implementation Engineer for the project, where I managed the Purchase Order (PO) process and implemented the hardware components, including the Arduino board, circuit components, and motion sensors. I also embedded the circuit system functionality with Arduino IDE library code to ensure reliable data capture and hardware performance. Throughout the project, I documented the full procedure on detailed PowerPoint presentations and technical reports. Furthermore, I presented the project poster at the capstone fair, explaining in clear detail the system design to judges and attendees.',
             link: 'https://www.youtube.com/watch?v=ins52cy6WJk',
             mediaType: 'capstone-collage'
+        },
+        'graduation-tamu-2025': {
+            title: '2025 Graduation from Texas A&M University',
+            description:
+                'I obtained my Bachelor of Science from Texas A&M University - College of Engineering in May 2025. The day before graduation, I attended the senior gathering, which provided meaningful opportunities to connect with professors, mentors, and fellow engineers, reflecting on our shared journey. On the day of the graduation, I participated in the commencement ceremony, where I obtained my diploma in front of my family, friends, and peers. This achievement marked a significant milestone for me because it was the result of many years of technical growth, hands-on engineering experience, and emotional resilience that led to the development foundation of my professional path.',
+            link: 'https://www.youtube.com/live/rdcz-KstRc0?si=kM_KTt0c_XywwRF_',
+            mediaType: 'tamu-commencement-collage'
         },
         'turbo-machinery-symposium-2025': {
             title: '2025 Turbo Machinery Symposium',
@@ -110,22 +118,28 @@ document.addEventListener('DOMContentLoaded', function() {
             eventDetails.hidden = true;
             cyberautoCollageContainer.hidden = true;
             mcdermottVideoContainer.hidden = true;
+            tamuCommencementCollageContainer.hidden = true;
             capstoneCollageContainer.hidden = true;
+            if (turboCollageContainer) {
+                turboCollageContainer.hidden = true;
+            }
             return;
         }
 
         eventTitle.textContent = selectedEvent.title;
         eventDescription.textContent = selectedEvent.description;
         eventLink.href = selectedEvent.link;
-        
+
         // Show or hide media based on event type
         cyberautoCollageContainer.hidden = selectedEvent.mediaType !== 'cyberauto-collage';
         mcdermottVideoContainer.hidden = selectedEvent.mediaType !== 'mcdermott-video';
+        tamuCommencementCollageContainer.hidden = selectedEvent.mediaType !== 'tamu-commencement-collage';
         capstoneCollageContainer.hidden = selectedEvent.mediaType !== 'capstone-collage';
+
         if (turboCollageContainer) {
             turboCollageContainer.hidden = selectedEvent.mediaType !== 'turbo-collage';
         }
-        
+
         eventDetails.hidden = false;
     });
 });
