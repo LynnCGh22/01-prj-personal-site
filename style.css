@@ -301,6 +301,23 @@ section {
   color: #1f3a4a;
 }
 
+.credential-link {
+  display: inline-block;
+  margin: 2px 0 14px;
+  padding: 9px 14px;
+  border-radius: 8px;
+  background: #0a66c2;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.credential-link:hover,
+.credential-link:focus {
+  background: #003355;
+  text-decoration: underline;
+}
+
 /* PROFILE IMAGE */
 .profile-photo {
   width: 140px;
