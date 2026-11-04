@@ -160,41 +160,19 @@
     <section id="projects">
       <h2 class="section-title">Projects</h2>
 
-      <div class="project-card">
-        <label for="project-select" class="project-label">Choose a project</label>
-        <select id="project-select" class="project-select">
-          <option value="">Select a project</option>
-          <option value="aqua-rise">AquaRise - Water Drop Rush</option>
-          <option value="Intel-Sustainability-Project">Intel Sustainability Project</option>
-          <option value="NASA-Space-Image-Gallery">NASA Space Image Gallery</option>
-          <option value="Smart-Routine-&-Product-Advisor">L'oreal-Smart-Routine-&-Product-Advisor</option>
-        </select>
-
-        <div id="project-details" class="project-details" hidden>
-          <h3 id="project-title"></h3>
-          <p id="project-description"></p>
-          <a id="project-link" href="#" target="_blank" rel="noopener noreferrer">View Project</a>
-        </div>
-      </div>
+      <!-- Project cards are added here by script.js -->
+      <div id="project-cards" class="card-list"></div>
     </section>
 
     <!-- SEE ME IN OTHER EVENTS -->
      <section id="events">
       <h2 class="section-title">See Me in Other Events</h2>
       
-      <!-- Event dropdown selector -->
-      <div class="event-card">
-        <label for="event-select" class="event-label">Choose an event</label>
-        <select id="event-select" class="event-select">
-          <option value="">Select an event</option>
-          <option value="cyberauto-2023">2023 CyberAuto Challenge</option>
-          <option value="mcdermott-2024">2024 McDermott International Internship</option>
-          <option value="capstone-project-2024">2024-2025 Capstone Project</option>
-          <option value="graduation-tamu-2025">2025 Graduation from Texas A&M University</option>
-          <option value="turbo-machinery-symposium-2025">2025 Turbo Machinery Symposium</option>
-        </select>
+      <!-- Event cards are added here by script.js -->
+      <div id="event-cards" class="card-list"></div>
 
-        <!-- Event details revealed by dropdown -->
+      <!-- Event details revealed when a card is clicked -->
+      <div id="event-card" class="event-card" hidden>
         <div id="event-details" class="event-details" hidden>
           <h3 id="event-title"></h3>
           <p id="event-description"></p>

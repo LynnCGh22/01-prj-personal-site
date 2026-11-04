@@ -1,12 +1,9 @@
-/* Create Drop-Down Menu for Projects Section */
+/* Create Cards for Projects Section */
 document.addEventListener('DOMContentLoaded', function() {
-    const projectSelect = document.getElementById('project-select');
-    const projectDetails = document.getElementById('project-details');
-    const projectTitle = document.getElementById('project-title');
-    const projectDescription = document.getElementById('project-description');
-    const projectLink = document.getElementById('project-link');
+    // The empty box in index.html where the project cards will be placed
+    const projectCards = document.getElementById('project-cards');
 
-    if (!projectSelect || !projectDetails || !projectTitle || !projectDescription || !projectLink) {
+    if (!projectCards) {
         return;
     }
 
@@ -39,25 +36,38 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
 
-    projectSelect.addEventListener('change', function() {
-        const selectedProject = projectInfo[this.value];
+    // Make one card for each project in the list above
+    Object.keys(projectInfo).forEach(function(key) {
+        const project = projectInfo[key];
 
-        if (!selectedProject) {
-            projectDetails.hidden = true;
-            return;
-        }
+        const card = document.createElement('div');
+        card.className = 'info-card';
 
-        projectTitle.textContent = selectedProject.title;
-        projectDescription.textContent = selectedProject.description;
-        projectLink.href = selectedProject.link;
-        projectDetails.hidden = false;
+        const title = document.createElement('h3');
+        title.textContent = project.title;
+
+        const description = document.createElement('p');
+        description.textContent = project.description;
+
+        const link = document.createElement('a');
+        link.href = project.link;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.className = 'card-button';
+        link.textContent = 'View Project';
+
+        card.appendChild(title);
+        card.appendChild(description);
+        card.appendChild(link);
+        projectCards.appendChild(card);
     });
 });
 
-/* Create Drop-Down Menu for See Me in Other Events Section */
+/* Create Cards for See Me in Other Events Section */
 
 document.addEventListener('DOMContentLoaded', function() {
-    const eventSelect = document.getElementById('event-select');
+    // The empty box in index.html where the event cards will be placed
+    const eventCards = document.getElementById('event-cards');
     const eventDetails = document.getElementById('event-details');
     const eventTitle = document.getElementById('event-title');
     const eventDescription = document.getElementById('event-description');
@@ -68,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const capstoneCollageContainer = document.getElementById('capstone-collage-container');
     const turboCollageContainer = document.getElementById('turbo-collage-container');
 
-    if (!eventSelect || !eventDetails || !eventTitle || !eventDescription || !eventLink || !cyberautoCollageContainer || !mcdermottVideoContainer || !capstoneCollageContainer) {
+    if (!eventCards || !eventDetails || !eventTitle || !eventDescription || !eventLink || !cyberautoCollageContainer || !mcdermottVideoContainer || !capstoneCollageContainer) {
         console.error('Event section elements not found');
         return;
     }
@@ -111,20 +121,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    eventSelect.addEventListener('change', function() {
-        const selectedEvent = eventInfo[this.value];
+    const allCards = [];
 
-        if (!selectedEvent) {
-            eventDetails.hidden = true;
-            cyberautoCollageContainer.hidden = true;
-            mcdermottVideoContainer.hidden = true;
-            tamuCommencementCollageContainer.hidden = true;
-            capstoneCollageContainer.hidden = true;
-            if (turboCollageContainer) {
-                turboCollageContainer.hidden = true;
-            }
-            return;
-        }
+    // Show the details and photos for the event that was clicked
+    function showEvent(selectedEvent, clickedCard) {
+        // Highlight only the clicked card
+        allCards.forEach(function(card) {
+            card.classList.remove('selected');
+        });
+        clickedCard.classList.add('selected');
 
         eventTitle.textContent = selectedEvent.title;
         eventDescription.textContent = selectedEvent.description;
@@ -140,6 +145,35 @@ document.addEventListener('DOMContentLoaded', function() {
             turboCollageContainer.hidden = selectedEvent.mediaType !== 'turbo-collage';
         }
 
+        // Reveal the white box that holds the details
+        document.getElementById('event-card').hidden = false;
         eventDetails.hidden = false;
+        eventDetails.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // Make one clickable card for each event in the list above
+    Object.keys(eventInfo).forEach(function(key) {
+        const selectedEvent = eventInfo[key];
+
+        // A button is used so the card works with the keyboard too
+        const card = document.createElement('button');
+        card.type = 'button';
+        card.className = 'info-card event-choice';
+
+        const title = document.createElement('h3');
+        title.textContent = selectedEvent.title;
+
+        const hint = document.createElement('span');
+        hint.className = 'card-hint';
+        hint.textContent = 'Click to view details';
+
+        card.appendChild(title);
+        card.appendChild(hint);
+        card.addEventListener('click', function() {
+            showEvent(selectedEvent, card);
+        });
+
+        allCards.push(card);
+        eventCards.appendChild(card);
     });
 });
